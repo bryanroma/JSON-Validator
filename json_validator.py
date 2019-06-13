@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 ## Script Author: Bryan Rodriguez Martin
 ## Description: Simple JSON validator written in python for a project in https://www.gofiotec.com
 ## TO-DO / KNOWN ERRORS
@@ -6,7 +6,6 @@
 
 
 ## Execution: python json_checker.py
-
 
 # -*- coding: utf-8 -*-
 
@@ -21,7 +20,7 @@ data_json = "null"
 def load_json():
     foo = 'null'
     try:
-        ruta_json = raw_input("[*] JSON path >>> ")
+        ruta_json = input("[*] JSON path >>> ")
         print(ruta_json)
     # json.load throws a dicctionary
         with open(ruta_json, 'r') as f:
@@ -61,8 +60,8 @@ def validar_json(data_json):
 
 def python_ver():
     #print(sys.version_info[0])
-    if sys.version_info[0] > 2:
-        print("Sorry, you must use Python 2.")
+    if sys.version_info[0] < 3:
+        print("Sorry, you must use Python 3.X")
         sys.exit()
 
 
